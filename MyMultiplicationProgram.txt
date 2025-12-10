@@ -1,0 +1,27 @@
+start = int(input("Enter the smaller number: "))
+end = int(input("Enter the larger number: "))
+
+with open("table.txt", "w") as f:
+    
+    if start >= end:
+        print("The first number should be smaller than the second number")
+    else:
+        print("	", end="")  
+        print("	", end="", file=f)
+        
+        for i in range(start, end + 1):
+            print(i, end="	")
+            print(i, end="	", file =f)
+        print()
+        print(file=f)
+
+        for i in range(start, end + 1):
+            print(i, end="	")
+            print(i, end="	", file=f)
+            
+            for j in range(start, end + 1):
+                print(i * j, end="	")
+                print(i * j, end="	", file=f)
+            print()  
+            print(file=f)
+
